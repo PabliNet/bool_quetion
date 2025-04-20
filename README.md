@@ -10,5 +10,12 @@ Install on Debian 12 and later:
 
 ### Using the code in Python 3.x
 ~~~
-reply = true_false('Do you wish to continue?', ['yes', 'no'])
+names = []
+reply = True
+while reply:
+    element = input ('Enter the full name: ')
+    names.append(element)
+    for name in names:
+        print (name)
+    reply = true_false('Do you wish to continue?', ['Yes', 'no'])
 ~~~

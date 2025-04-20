@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bool_quetion"
-version = "0.1.2"
+version = "0.1.3"
 description = "Módulo para preguntar por sí o por no"
 readme = "README.md"
 authors = [{ name="Pablo Alejandro Carravetti", email="gpablinux@gmail.com" }]
