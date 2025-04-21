@@ -1,3 +1,11 @@
+try:
+    from sys import stdin
+    from tty import setraw
+    import termios
+    _has_termios = True
+except ImportError:
+    raise IndentationError('This function is available only on '
+    'Unix-based systems.')
 def true_false(question, options, mark=False):
     err_str = []
     if not isinstance(options, (list, tuple)):
@@ -41,9 +49,6 @@ def true_false(question, options, mark=False):
         err_str.append('AttributeError: Se esperaba un argumento buleano '
         '(True o False).')
         raise AttributeError('\n'.join(err_str))
-    from sys import stdin
-    from tty import setraw
-    import termios
     title_key = lambda _k: f'\033[1m{_k[0]}\033[0m{_k[1:]}'
     words_question = (
             [f'{title_key(k)}' for k in options]
