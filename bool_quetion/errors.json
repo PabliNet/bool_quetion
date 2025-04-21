@@ -1,0 +1,26 @@
+{
+    "invalid_type_options": {
+        "en": "The second argument must be a tuple or list.",
+        "es": "El segundo argumento tiene que ser una tupla o lista."
+    },
+    "wrong_len_options": {
+        "en": "The 2nd argument must be a tuple or list with two elements.",
+        "es": "El 2° argumento debe ser una tupla o lista de 2 elementos."
+    },
+    "options_not_str": {
+        "en": "Both elements of the second argument must be strings.",
+        "es": "Los dos elementos del 2° argumento tienen que ser cadenas (str)."
+    },
+    "options_same_char": {
+        "en": "The first characters of the elements in the second argument must be different and alphanumeric.",
+        "es": "Los primeros caracteres de los elementos del segundo argumento deben ser diferentes y alfanuméricos."
+    },
+    "invalid_type_question": {
+        "en": "The first argument must be a string.",
+        "es": "El primer argumento tiene que ser una cadena (str)."
+    },
+    "invalid_type_mark": {
+        "en": "This argument expects a boolean value (True or False).",
+        "es": "Se esperaba un argumento booleano (True o False)."
+    }
+}

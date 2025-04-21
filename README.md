@@ -12,6 +12,7 @@ Install on Debian 12 and later:
 
 ### Using the code in Python 3.x
 ~~~
+from bool_quetion import true_false
 names = []
 reply = True
 while reply:

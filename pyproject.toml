@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bool_quetion"
-version = "0.1.5"
+version = "0.1.6.1"
 description = "Module for asking yes/no or accept/cancel questions"
 readme = "README.md"
 authors = [{ name="Pablo Alejandro Carravetti", email="gpablinux@gmail.com" }]
