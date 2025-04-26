@@ -19,8 +19,12 @@
         "en": "The first argument must be a string.",
         "es": "El primer argumento tiene que ser una cadena (str)."
     },
+    "invalid_type_err_question": {
+        "en": "The third argument must be a boolean or string.",
+        "es": "El tercer argumento tiene que ser una cadena (str) o booleano (bool)."
+    },
     "invalid_type_mark": {
-        "en": "This argument expects a boolean value (True or False).",
-        "es": "Se esperaba un argumento booleano (True o False)."
+        "en": "This fourth argument expects a boolean value (True or False).",
+        "es": "Se esperaba el cuarto argumento con valor booleano (True o False)."
     }
 }

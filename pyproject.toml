@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bool_quetion"
-version = "0.1.6.3"
-description = "Module for asking yes/no or accept/cancel questions"
+version = "0.1.7"
+description = "Python-module for asking yes/no or accept/cancel questions"
 readme = "README.md"
 authors = [{ name="Pablo Alejandro Carravetti", email="gpablinux@gmail.com" }]
 license = {text = "GNU General Public License v3.0"}
