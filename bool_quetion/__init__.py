@@ -40,7 +40,7 @@ def true_false(question, options, err_msg='Bad key press', mark=False):
             [f'{title_key(k)}' for k in options]
             if mark else options.copy()
             )
-    print (f'{question} {" o ".join(words_question)}')
+    print (f'{question} {" ".join(words_question)}')
     fd = stdin.fileno()
     old_settings = termios.tcgetattr(fd)
     first_letter = [k[0].lower() for k in options]
