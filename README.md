@@ -2,7 +2,7 @@
 ## Python-module for asking yes/no or accept/cancel questions.
 
 ### Installing
-#### Install on Debian 11 or older from PyP
+#### Install from PyP
 
 `pip install bool_quetion`
 
@@ -12,9 +12,11 @@
 
 #### Install from APT repositories
 
+**As root or using sudo**
+
 Add APT repositories:
 
-`echo "deb https://pablinet.github.io/apt ./" | sudo tee /etc/apt/sources.list.d/pablinet.list`
+`echo "deb https://pablinet.github.io/apt ./" > /etc/apt/sources.list.d/pablinet.list`
 
 Add APT Key as root or using sudo:
 
@@ -22,12 +24,13 @@ Add APT Key as root or using sudo:
 
 Upload APT repositories:
 
-`sudo apt update`
+`apt update`
 
 Install bool_quetion:
 
-`sudo apt install python-bool-quetion`
+`apt install python-bool-quetion`
 
+---
 ### Using the code in Python 3.x
 ~~~
 from bool_quetion import true_false
@@ -48,7 +51,7 @@ It is also possible to customize the error message and highlight the characters 
 reply = true_false('Do you wish to continue?', ['Yes or', 'no'], True)
 reply = true_false('Continue?', ['Yes or', 'no'], 'Error Key', True)
 ~~~
-
+---
 **BONUS TRACK**
 
 Use this library in Bash.
