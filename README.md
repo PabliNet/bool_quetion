@@ -14,11 +14,11 @@
 
 Add APT repositories:
 
-`echo "deb [signed-by=/usr/share/keyrings/pablinet.gpg] https://pablinet.github.io/apt ./" | sudo tee /etc/apt/sources.list.d/pablinet.list`
+`echo "deb https://pablinet.github.io/apt ./" | sudo tee /etc/apt/sources.list.d/pablinet.list`
 
-Add APT Key:
+Add APT Key as root or using sudo:
 
-`wget -qO- https://pablinet.github.io/apt/public.key | sudo gpg --dearmor -o /usr/share/keyrings/pablinet.gpg`
+`wget -O /etc/apt/trusted.gpg.d/pablinet.gpg https://pablinet.github.io/apt/pablinet.gpg`
 
 Upload APT repositories:
 
