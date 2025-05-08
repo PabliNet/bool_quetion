@@ -1,35 +1,33 @@
 try:
     import sys
     import termios
+    from pathlib import Path
     from sys import stdin
     from tty import setraw
+    from localized_message import get_message
     _has_termios = True
 except ImportError:
     raise IndentationError('This function is available only on '
     'Unix-based systems.')
 
-try:
-    from .localized_errors import get_error
-except ImportError:
-    from localized_errors import get_error
-
 def display_errors(_question, _options, _err_msg, _mark=False):
+    _json_path = Path(__file__).parent / 'errors.json'
     if not isinstance(_options, (list, tuple)):
-        raise AttributeError(get_error("invalid_type_options"))
+        raise AttributeError(get_message("invalid_type_options", _json_path))
     if isinstance(_options, (list, tuple)) and len(_options) != 2:
-        raise IndexError(get_error('wrong_len_options'))
+        raise IndexError(get_message('wrong_len_options', _json_path))
     if any(not isinstance(k, str) for k in _options):
-        raise ValueError(get_error('options_not_str'))
+        raise ValueError(get_message('options_not_str', _json_path))
     first_chars = (_options[0][0] + _options[1][0]).lower()
     if first_chars[0] == first_chars[1] or not first_chars.isalnum():
-        raise ValueError(get_error('options_same_char'))
+        raise ValueError(get_message('options_same_char', _json_path))
     del (first_chars)
     if not isinstance(_question, str):
-        raise AttributeError(get_error('invalid_type_question'))
+        raise AttributeError(get_message('invalid_type_question', _json_path))
     if not isinstance(_err_msg, (bool, str)):
-        raise AttributeError(get_error('invalid_type_err_mark'))
+        raise AttributeError(get_message('invalid_type_err_mark', _json_path))
     if not isinstance(_mark, bool):
-        raise AttributeError(get_error('invalid_type_mark'))
+        raise AttributeError(get_message('invalid_type_mark', _json_path))
 
 def true_false(question, options, err_msg='Bad key press', mark=False):
     if isinstance(err_msg, bool):

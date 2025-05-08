@@ -4,12 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bool_quetion"
-version = "0.1.7.4"
+version = "0.1.8"
 description = "Python-module for asking yes/no or accept/cancel questions"
 readme = "README.md"
 authors = [{ name="Pablo Alejandro Carravetti", email="gpablinux@gmail.com" }]
 license = {text = "GNU General Public License v3.0"}
-dependencies = []
+dependencies = [
+    "localized_message"
+]
 
 [project.scripts]
 bool_quetion = "bool_quetion.__main__:main"

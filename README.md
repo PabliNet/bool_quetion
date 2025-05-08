@@ -6,7 +6,21 @@
 
 `pip install bool_quetion`
 
-#### Install on Debian 12 and later from PyP
+**Using a virtual environment.**
+
+Create virtual environment:
+
+`python3 -m venv .venv`
+
+Activate virtual environment:
+
+`source .venv/bin/activate`
+
+Install bool_quetion:
+
+`pip install bool_quetion`
+
+If you're not using a virtual environment and want to install packages globally, you'll likely need --break-system-packages to bypass restrictions that protect system:
 
 `pip install bool_quetion --break-system-packages`
 
@@ -18,7 +32,7 @@ Add APT repositories:
 
 `echo "deb https://pablinet.github.io/apt ./" > /etc/apt/sources.list.d/pablinet.list`
 
-Add APT Key as root or using sudo:
+Add APT Key:
 
 `wget -O /etc/apt/trusted.gpg.d/pablinet.gpg https://pablinet.github.io/apt/pablinet.gpg`
 
@@ -28,7 +42,7 @@ Upload APT repositories:
 
 Install bool_quetion:
 
-`apt install python-bool-quetion`
+`apt install python3-bool-quetion`
 
 ---
 ### Using the code in Python 3.x
@@ -81,16 +95,16 @@ Add execution permissions:
 
 Run the script:
 ~~~
-./true-false 'Do you wish to continue?' "Yes or%No"
-./true-false 'Do you wish to continue?' "Yes or%No" 'Bad key'
-./true-false 'Do you wish to continue?' "Yes or%No" 'Bad key' true
+./true-false 'Do you wish to continue?' 'Yes or%No'
+./true-false 'Do you wish to continue?' 'Yes or%No' 'Bad key'
+./true-false 'Do you wish to continue?' 'Yes or%No' 'Bad key' true
 ~~~
 
 Run script with custom error code:
 
 ~~~
-./true-false 'Do you wish to continue?' "Yes or%No%5"
-./true-false 'Do you wish to continue?' "Yes or%No%5" 'Bad key'
-./true-false 'Do you wish to continue?' "Yes or%No%5" 'Bad key' true
+./true-false 'Do you wish to continue?' 'Yes or%No%5'
+./true-false 'Do you wish to continue?' 'Yes or%No%5' 'Bad key'
+./true-false 'Do you wish to continue?' 'Yes or%No%5' 'Bad key' true
 ~~~
 
